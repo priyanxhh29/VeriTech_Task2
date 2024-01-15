@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    height: 100%;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    
+    background-image: url(https://images.unsplash.com/photo-1572025600482-08238b1ed5a3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+   
+    
+}
+#main #filter {
+    background-color: rgba(0, 0, 0, 0.574);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    position: relative;
+}
+
+
+#nav {
+    position: absolute;
+    z-index: 9999;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    
+}
+#nav #nright a {
+    padding: 0 10px;
+    text-decoration: none;  
+    color: #fff;
+}
+#nav #nright a:hover {
+   
+    border-bottom: 1px solid white;
+}
+
+
+#main #left {
+    position: relative;
+    width: 30%;
+    padding: 0 80px;
+    height: 100%;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.356);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+#left .place {
+    color:white;
+    width: 100%;
+}
+#left .place:nth-child(2) h4{
+    opacity: 1;
+    font-size: 30px;
+    white-space: nowrap;
+} 
+#left .place:nth-child(2) h6{
+    font-size: 10px;
+    white-space: nowrap;
+} 
+.place h4{
+    display: inline-block;
+    opacity: .7;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.place h6 {
+    font-weight: 600;
+    opacity: .4;
+}
+#left #scroll {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    gap: 10px;
+    right:0;
+    color: white;
+    transform-origin: 0 50%;
+    transform: translate(-50%,0) rotate(-90deg);
+}
+#scroll #line {
+    width: 50px;
+    height: 1.5px;
+    background-color: #fff;
+}
+#menuIcon {
+    display: none;
+}
+
+
+#main #right {    
+    width: 70%;
+    height: 100%;
+    color: #fff;
+}
+#right #text {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(0,-50%);
+    text-align: right;
+}
+#text h3 {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1;
+}
+#text h1{
+    font-weight: 300;
+    font-size: 80px;
+    line-height: 1;
+}
+#text #input {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+    
+}
+#text input {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 25px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+   
+}
+#text #input i {
+    font-size: 20px;
+}
+#text input::placeholder{
+    color: #fff;
+}
+#right small {
+    position: absolute;
+    color: #fff;
+    right: 5%;
+    bottom: 5%;
+}
+
+
+
+@media(max-width:687px) {
+    #main #nav{
+        height: 70px;
+        padding: 0 20px;
+    }
+    #nav #nright {
+        display: none;
+    }
+    #nav h2 {
+        font-size: 16px;
+    }
+    #menuIcon {
+        display: initial;
+    }
+    #main #left {
+        width: 100%;
+        height: 60%;
+        padding: 0 20px;
+    }
+    #left .place:nth-child(2) h4{
+        font-size: 30px;
+    }
+    #main #filter{       
+       position: relative;
+        flex-direction: column-reverse;
+        
+    }
+    #main #right {
+        width: 100%;
+        height: 40%;
+        position: relative;
+    }
+    
+    #main #right #text h1 {
+        font-size: 40px;
+    }
+    
+}
+
